@@ -1,5 +1,6 @@
 package org.example.app;
 
+import org.example.app.enums.PostStatusSelection;
 import org.example.app.modules.JsonData;
 import org.example.app.pages.LoginPage;
 import org.example.app.pages.MainPage;
@@ -42,7 +43,7 @@ public class TestScenario1UI extends TestBase{
     public void createPost() throws InterruptedException {
 
         JsonData jsonData1 = new JsonData("111","Test1",  true);
-        JsonData jsonData2 = new JsonData("222","Test2",  false);
+        JsonData jsonData2 = new JsonData("222","Test2",  true);
 
         LoginPage loginPage = new LoginPage(driver);
         MainPage mainPage = loginPage.clickOnLoginButton();
@@ -54,13 +55,19 @@ public class TestScenario1UI extends TestBase{
         postCreateNewPage.setTitleText("Test1");
         postCreateNewPage.setContent("Content1");
 
-        postCreateNewPage.clickOnAddNewJsonButton();
-        postCreateNewPage.clickOnAddNewJsonButton();
+  /*      postCreateNewPage.clickOnAddNewJsonButton();
+        postCreateNewPage.clickOnAddNewJsonButton();*/
 
   //      postCreateNewPage.setJsonElement(jsonData1, 1);
-        postCreateNewPage.setJsonElement(jsonData2, 2);
+  //      postCreateNewPage.setJsonElement(jsonData2, 2);
  //       List<WebElement> jsonElement = postCreateNewPage.getJsonElement(1);
 
+        postCreateNewPage.selectStatus(PostStatusSelection.ACTIVE);
+        postCreateNewPage.selectPublisher("xxxxx@gmail.com");
+
+        postCreateNewPage.clickOnPublishedCheckBox(false);
+
+        postCreateNewPage.clickOnSaveButton();
 
 
 
@@ -71,6 +78,19 @@ public class TestScenario1UI extends TestBase{
         System.out.println("test.....");
 
 
+    }
+
+    @Test
+    public void testPostTable()
+    {
+        LoginPage loginPage = new LoginPage(driver);
+        MainPage mainPage = loginPage.clickOnLoginButton();
+        mainPage.clickOnHappyFolderDD();
+
+        PostPage postPage = mainPage.clickOnPostButton();
+        postPage.getAllRowInTable();
+        postPage.getTableColumnValue("222");
+ //       postPage.selectTableRow("Test1");
     }
 
 

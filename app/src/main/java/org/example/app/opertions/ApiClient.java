@@ -1,7 +1,9 @@
 package org.example.app.opertions;
 
 import io.restassured.RestAssured;
+import io.restassured.http.Method;
 import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
 public class ApiClient {
 
@@ -17,6 +19,16 @@ public class ApiClient {
                 .when()
                 .get(endpoint);
     }
+
+    public static Response post(String endpoint, String body)
+    {
+        return RestAssured.given()
+                .baseUri(baseUri).body(body)
+                .when()
+                .post(endpoint);
+    }
+
+
 
     // Add more methods for POST, PUT, DELETE if needed
 }
