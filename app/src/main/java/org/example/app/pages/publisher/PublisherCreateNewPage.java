@@ -13,8 +13,6 @@ public class PublisherCreateNewPage extends AbstractPage {
 
     private static final By showButton = By.xpath("//a[@data-testid='action-show']");
 
-    private static final By deleteButton = By.xpath("//a[@data-testid='action-delete']");
-
     public PublisherCreateNewPage(WebDriver driver) {
         this.driver = driver;
         this.bot = new ActionBot(driver);
@@ -35,13 +33,5 @@ public class PublisherCreateNewPage extends AbstractPage {
         bot.click(saveButton);
         return new PublisherPage(driver);
     }
-
-    public PublisherShowPage clickOnShowButton()
-    {
-        bot.click(showButton);
-        return new PublisherShowPage(driver);
-    }
-
-
 
 }

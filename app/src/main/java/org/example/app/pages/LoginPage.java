@@ -4,6 +4,7 @@ import org.example.app.utils.ActionBot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/* Login Page Object to perform login*/
 public class LoginPage extends AbstractPage {
 
     private static final By loginButton = By.xpath("//button[text()='Login']");

@@ -6,7 +6,7 @@ public class JsonData {
 
     private String someJsonNumber;
     private String someJsonString;
- //   private Date someJsonDate;
+
     private boolean someJsonBoolean;
 
     public boolean isSomeJsonBoolean() {
@@ -21,7 +21,6 @@ public class JsonData {
     public JsonData(String someJsonNumber, String someJsonString, boolean someJsonBoolean) {
         this.someJsonNumber = someJsonNumber;
         this.someJsonString = someJsonString;
- //       this.someJsonDate = someJsonDate;
         this.someJsonBoolean = someJsonBoolean;
     }
 
@@ -41,11 +40,4 @@ public class JsonData {
         this.someJsonString = someJsonString;
     }
 
- /*   public Date getSomeJsonDate() {
-        return someJsonDate;
-    }
-
-    public void setSomeJsonDate(Date someJsonDate) {
-        this.someJsonDate = someJsonDate;
-    }*/
 }

@@ -39,19 +39,6 @@ public class ActionBot {
         }
     }
 
-
-    public void jsClick(By elementLocator)
-    {
-
-        try {
-            WebElement element = driver.findElement(elementLocator);
-            ((JavascriptExecutor) driver).executeScript("arguments[0].click;", element);
-        } catch (NoSuchElementException e) {
-            System.out.println("No Such Element:"+ elementLocator);
-        }
-
-    }
-
     public void writeToElement(String text, By elementLocator)
     {
         try {
@@ -122,18 +109,5 @@ public class ActionBot {
         waitForElementToBeClickable(element, 10);
     }
 
-    public boolean isElementDisplay(By elementLocator)
-    {
-        WebElement element = driver.findElement(elementLocator);
-        return element.isDisplayed();
-
-    }
-    public void mouseOver(By elementLocator)
-    {
-        WebElement element = driver.findElement(elementLocator);
-        Actions action = new Actions(driver);
-        action.moveToElement(element).perform();
-
-    }
 
 }

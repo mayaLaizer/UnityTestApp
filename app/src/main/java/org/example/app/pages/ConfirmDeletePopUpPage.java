@@ -6,6 +6,7 @@ import org.example.app.utils.ActionBot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+/*Confirm Delete PopUP Page - in case of delete specific item*/
 public class ConfirmDeletePopUpPage {
 
 

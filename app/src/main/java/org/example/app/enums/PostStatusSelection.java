@@ -1,9 +1,10 @@
 package org.example.app.enums;
 
+//Post Status Enum
 public enum PostStatusSelection {
 
     ACTIVE("ACTIVE"),
-    REMOVE("REMOVE");
+    REMOVED("REMOVED");
 
 
     public String option;

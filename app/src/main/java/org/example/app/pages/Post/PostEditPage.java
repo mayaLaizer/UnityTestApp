@@ -5,6 +5,8 @@ import org.example.app.utils.ActionBot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+
+/*Post Edit Page objet - click on edit open the item for editing*/
 public class PostEditPage extends PostCreateNewPage {
 
     private static final By editPostButton = By.xpath("//section[contains(@class,'adminjs_Box')]//a[@data-testid='action-edit']");

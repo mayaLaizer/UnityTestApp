@@ -6,6 +6,8 @@ import org.example.app.utils.ActionBot;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+
+/* Main Page Object to select Happy Folder Option*/
 public class MainPage extends AbstractPage {
 
     public MainPage(WebDriver driver) {
